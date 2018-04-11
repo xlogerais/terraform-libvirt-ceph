@@ -10,7 +10,7 @@ packages:
 users:
   - default
   - name: ceph-deploy
-    ssh-authorized-keys: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINFs1Pn1uQwsQWZ9/bZ1QHIflVu5nLiTUE7iCibPHKt5 xavier@work-lab'
+    ssh-authorized-keys: "${sshuser}"
     sudo: 'ALL=(ALL) NOPASSWD:ALL'
 
 runcmd:

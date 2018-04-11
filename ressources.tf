@@ -32,6 +32,10 @@ resource "libvirt_volume" "osd_data" {
 
 data "template_file" "user_data" {
   template = "${file("${path.module}/user-data.tpl")}"
+  vars = {
+    sshuser = "${var.sshuser}"
+    sshpubkey = "${var.sshpubkey}"
+  }
 }
 
 resource "libvirt_cloudinit" "monitor_cloudinit" {
